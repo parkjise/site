@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* *******************************************************
+ * filename : faq.css
+ * description : FAQ형 게시판 관련 CSS
+ * date : 2019-09-30
+******************************************************** */
+
+/* ******************   갤러리 게시판 :: FAQ 기본형 01 ********************** */
+.faq-list-con{border-top:1px solid #000; margin-bottom:30px; }
+.faq-list-con .faq-item{border-bottom:3px solid #E5E5E5;}
+.faq-list-con .faq-item dt{position:relative; padding:15px 30px 15px 55px; cursor:pointer; }
+.faq-list-con .faq-item dt .faq-title{display:block; color:#343434; font-size:16px; font-weight:400; letter-spacing:-0.5px; line-height:24px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; vertical-align:top;}
+.faq-list-con .faq-item dt .arrow{position:absolute; top:16px; right:15px; width:13px; height:9px; }
+.faq-list-con .faq-item dt i{color:#666; font-size:26px;}
+.faq-list-con .faq-item.open dt .arrow i{margin-top:-2px; transform:rotate(-180deg);}
+.faq-list-con .faq-item.open dt .faq-title{white-space:normal; text-overflow:unset;}
+.faq-list-con .faq-item dd{display:none; position:relative; border-top:1px solid #d7d7d7; padding:18px 30px 15px 55px; background:#f0f0f0; }
+.faq-list-con .faq-item dd .answer-txt-con{line-height:24px; font-size:14px; color:#333; }
+.faq-list-con .faq-item dt .question-icon,
+.faq-list-con .faq-item dd .answer-icon{
+    position:absolute; top:11px; left:10px; 
+	width:30px; height:30px; line-height:30px; 
+	text-align:center; 
+	color:#fff; 
+	font-size:13px; 
+	font-weight:400;
+	border:1px solid #222;
+    -webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%;
+}
+.faq-list-con .faq-item dt .question-icon{background-color:#222}
+.faq-list-con .faq-item dd .answer-icon{background-color:transparent; color:#222; }
+
+/* FAQ :: 카테고리 */
+.faq-list-con.faq-category-list-con dl dt .faq-category{display:inline-block; width:110px; color:#aaa; margin-right:5px; font-size:13px; line-height:24px; vertical-align:top; }
+.faq-list-con.faq-category-list-con dl dt .faq-title{display:inline-block; width:calc(95% - 120px);}
+
+@media all and ( max-width:800px ){
+	/*  FAQ 게시판 */
+	.faq-list-con .faq-item dt{padding-left:45px;}
+	.faq-list-con .faq-item dt .faq-title{font-size:14px; line-height:18px; }
+	.faq-list-con .faq-item dt .arrow{top:12px;}
+	.faq-list-con .faq-item dd{padding:15px;}
+	.faq-list-con .faq-item dt .question-icon,.faq-list-con .faq-item dd .answer-icon{top:14px; left:15px; width:20px; height:20px; line-height:20px; font-size:11px;}
+	.faq-list-con .faq-item dd .answer-icon{display:block; position:static; margin-bottom:10px;}
+	/* FAQ :: 카테고리 */
+	.faq-list-con.faq-category-list-con dl dt{padding-top:40px;}
+	.faq-list-con.faq-category-list-con dl dt .faq-category{position:absolute; top:13px; left:45px; right:30px; width:auto; margin-right:0; line-height:22px; }
+	.faq-list-con.faq-category-list-con dl dt .faq-title{display:block; width:100%; }
+	.faq-list-con.faq-category-list-con dl dt .arrow{top:23px;}
+}
+
+/* ******************   갤러리 게시판 :: FAQ 기본형 02 ********************** */
+.faq-list-con2 .faq-item{overflow:hidden; margin-bottom:2rem; border:2px solid #E5E5E5; border-radius:1rem; background-color:#fff; transition:all 0.3s }
+.faq-list-con2 .faq-item dt,
+.faq-list-con2 .faq-item dd{padding:2rem 4rem;}
+.faq-list-con2 .faq-item dt{position:relative; cursor:pointer; box-sizing:border-box;}
+.faq-list-con2 .faq-item dt .faq-subject{display: flex; align-items:center; width:100%;}
+.faq-list-con2 .faq-item dt .faq-title{display:block; color:#000; font-size:2rem; font-weight:500; line-height:1.75; /* white-space:nowrap; overflow:hidden; text-overflow:ellipsis; */ vertical-align:top;}
+.faq-list-con2 .faq-item dt .arrow{position:absolute; top:50%; transform:translateY(-50%); right:4rem; }
+.faq-list-con2 .faq-item dt i{color:#000; font-size:2rem;}
+.faq-list-con2 .faq-item dd{display:none; position:relative; background:#F5F5F5;}
+.faq-list-con2 .faq-item dd .answer-txt-con{line-height:1.875; font-size:16px; color:#333; letter-spacing:-0.75px;}
+.faq-list-con2 .faq-item dt .question-icon,
+.faq-list-con2 .faq-item dd .answer-icon{
+    /* position:absolute; */ 
+	/* top:50%; left:20px; transform:translateY(-50%); */
+	/* width:30px; height:30px; line-height:30px;  */
+	text-align:center; 
+	color:var(--main-color); 
+	font-size:2rem; 
+	font-weight:500;
+	font-family:'TheJamsil', "나눔고딕", NanumGothic, "Nanum Gothic","돋움", Dotum, Arial, sans-serif;
+	margin-right:1rem;
+}
+
+/* FAQ2 :: 카테고리 */
+.faq-list-con2.faq-category-list-con dl dt .faq-category{display:inline-block; width:110px; color:#aaa; margin-right:5px; font-size:13px; line-height:24px; vertical-align:top; }
+.faq-list-con2.faq-category-list-con dl dt .faq-title{display:inline-block; width:calc(95% - 120px);}
+.faq-list-con2.faq-category-list-con dl dt .faq-title > span {font-size: 1.7rem; font-weight: 300; letter-spacing: -0.05em; color: #666; padding-left: 1rem;}
+
+/* FAQ2 :: Open */
+.faq-list-con2 .faq-item.open{border:2px solid var(--main-color); }
+.faq-list-con2 .faq-item.open dt .arrow i{margin-top:-2px; transform:rotate(-180deg);}
+
+@media all and ( max-width:800px ){
+	/*  FAQ2 게시판 */
+	.faq-list-con2 .faq-item{margin-bottom:5px}
+	.faq-list-con2 .faq-item dt{padding-left:2rem; padding-right: 2rem; border-radius:5px; }
+	.faq-list-con2 .faq-item dt .faq-title{font-size:1.5rem; line-height:1.5; }
+	.faq-list-con2 .faq-item dt .arrow{position: relative; top: 0; transform: translateY(0); right: 0; padding-left: 1rem;}
+	.faq-list-con2 .faq-item dd{padding:15px;}
+	.faq-list-con2 .faq-item dt .question-icon,
+	.faq-list-con2 .faq-item dd .answer-icon{top:18px; left:15px; width:20px; height:20px; line-height:20px; font-size:13px;}
+	.faq-list-con2 .faq-item dd .answer-icon{display:block; position:static; margin-bottom:10px;}
+	/* FAQ2 :: Open */
+	.faq-list-con2 .faq-item.open dt{border-radius:5px 5px 0 0; }
+	/* FAQ2 :: 카테고리 */
+
+	.faq-list-con2.faq-category-list-con dl dt .faq-category{position:absolute; top:13px; left:45px; right:30px; width:auto; margin-right:0; line-height:22px; }
+	.faq-list-con2.faq-category-list-con dl dt .faq-title{display:block; width:100%; }
+}
+
+/* ******************   갤러리 게시판 :: FAQ 기본형 03 ********************** */
+.faq-list-con3 .faq-list-con3-inner{}
+.faq-list-con3 .faq-list-con3-inner li{float:left;width:25%; margin:-1px 0 0 -1px; position:relative}
+.faq-list-con3 .faq-list-con3-inner li a{border:1px solid #cfcfcf; display:table; width:100%; background:#fff; height:140px; text-align:center; transition:all 0.3s;}
+.faq-list-con3 .faq-list-con3-inner li a p{display:table-cell; vertical-align:middle; font-weight:300; font-size:16px; letter-spacing:-0.75px; line-height:1.625em; color:#333; padding:3%; }
+.faq-list-con3 .faq-list-con3-inner li a em{position:absolute; top:6px; left:10px; font-size:42px; color:rgba(0,0,0,0.1); font-weight:900; transition:all 0.3s;}
+@media all and ( min-width: 801px ){	
+	.faq-list-con3 .faq-list-con3-inner li a:hover{box-shadow:5px 3px 15px rgba(0,0,0,0.37); z-index:999; background:#eb8500; border-color:#eb8500}
+	.faq-list-con3 .faq-list-con3-inner li a:hover p{color:#fff;}
+	.faq-list-con3 .faq-list-con3-inner li a:hover em{color:rgba(255,255,255,0.2); }
+}
+
+@media all and ( max-width: 800px ){	
+	.faq-list-con3 .faq-list-con3-inner li{width:33.333%;}
+	.faq-list-con3 .faq-list-con3-inner li a p{font-size:13px; height:130px;}
+	.faq-list-con3 .faq-list-con3-inner li a em{font-size:30px}
+}
+
+@media all and ( max-width: 480px ){	
+	.faq-list-con3 .faq-list-con3-inner li{width:50%; }
+}
